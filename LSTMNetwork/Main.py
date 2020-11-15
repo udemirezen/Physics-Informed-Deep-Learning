@@ -4,6 +4,17 @@ from LSTMNetwork import prepare_data
 import numpy as np
 import matplotlib.pyplot as plt
 
+
+def moving_average(x, w):
+    return np.convolve(x, np.ones(w), 'same') / w
+
+
+def smooth(arr):
+    for i in range(len(arr)):
+        arr[i, :] = moving_average(arr[i, :], 3)
+    return arr
+
+
 # Read Data
 points, temps, times, temps_mean, temps_std = prepare_data.read_data()
 train_points, train_temps, eval_points, eval_temps, test_points, test_temps = prepare_data.train_val_test_app1(points,
@@ -48,6 +59,7 @@ plt.savefig('TEST ERRORS.png')
 
 # Predicting on all of the points
 predictions = rnn_model.predict(x=points)
+predictions = smooth(predictions)
 # Test on point number x (Vary from 1 to 1681)
 point_number = 100
 fig, ax = plt.subplots()
@@ -59,6 +71,7 @@ print(tf.keras.losses.MSE(temps[point_number], predictions[point_number]))
 
 # Predicting on Test Points
 test_preds = rnn_model.predict(x=test_points)
+test_preds = smooth(test_preds)
 point_number = 900
 fig, ax = plt.subplots()
 ax.plot(times, test_temps[point_number].reshape(100, 1))
