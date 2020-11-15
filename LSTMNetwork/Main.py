@@ -1,6 +1,6 @@
 import tensorflow as tf
 import keras.layers
-from SimpleLSTMNetwork import prepare_data
+from LSTMNetwork import prepare_data
 import numpy as np
 import matplotlib.pyplot as plt
 
