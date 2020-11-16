@@ -17,7 +17,7 @@ def read_data():
     p10 = genfromtxt('T_q200_v1500_T25_D100.csv', delimiter=',')
     p11 = genfromtxt('T_q300_v1000_T25_D100.csv', delimiter=',')
 
-    times = genfromtxt('time..csv', delimiter=',')
+    times = genfromtxt('time.csv', delimiter=',')
 
     all = np.concatenate((p1, p2, p3, p4, p5, p6, p7, p8, p9, p10, p11), axis=0)
 
