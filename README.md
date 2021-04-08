@@ -8,9 +8,10 @@ A Generic Data-Driven Framework via Physics-Informed Deep Learning
   - [DeepXDE](https://github.com/lululxvi/deepxde)
 
 1. Bidirectional LSTM Model:
-
+   
+    ![Picture1](https://user-images.githubusercontent.com/45353778/113974971-0c8a5800-9854-11eb-8ea4-833912b30c86.PNG)
   - [Using LSTM network to predict time-series temperatures / clustering approach](https://github.com/softsys4ai/Physics-Informed-Deep-Learning/blob/main/LSTMNetwork/Analytical_Thermal_Clustering.ipynb)
-  ![Picture1](https://user-images.githubusercontent.com/45353778/113974971-0c8a5800-9854-11eb-8ea4-833912b30c86.PNG)
+ 
     
 
 2. Physics-Informed Neural Network Model:
