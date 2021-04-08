@@ -1,5 +1,5 @@
 # Physics-Informed-Deep-Learning
-Project name: A Generic Data-Driven Framework via Physics-Informed Deep Learning
+A Generic Data-Driven Framework via Physics-Informed Deep Learning
 - Dependencies
 
   - [Matplotlib](https://matplotlib.org/)
